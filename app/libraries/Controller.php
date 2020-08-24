@@ -13,11 +13,11 @@
     }
 
     // Lets us load view from controllers
-    public function view($view, $data = []){
+    public function view($url, $data = []){
       // Check for view file
-      if(file_exists('../app/views/'.$view.'.php')){
+      if(file_exists('../app/views/'.$url.'.php')){
         // Require view file
-        require_once '../app/views/'.$view.'.php';
+        require_once '../app/views/'.$url.'.php';
       } else {
         // No view exists
         die('View does not exist');
